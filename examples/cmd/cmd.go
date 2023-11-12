@@ -18,7 +18,7 @@ import (
 	"log"
 	"time"
 
-	"go.etcd.io/gofail/examples"
+	"github.com/openkvlab/gofail/examples"
 )
 
 /*

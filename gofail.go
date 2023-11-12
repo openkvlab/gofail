@@ -24,7 +24,7 @@ import (
 	"runtime"
 	"strings"
 
-	"go.etcd.io/gofail/code"
+	"github.com/openkvlab/gofail/code"
 )
 
 var (

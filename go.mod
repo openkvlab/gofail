@@ -1,4 +1,4 @@
-module go.etcd.io/gofail
+module github.com/openkvlab/gofail
 
 go 1.20
 

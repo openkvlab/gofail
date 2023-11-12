@@ -26,7 +26,7 @@ Add special comments like below into your code where you want to inject failpoin
 ```
 
 ### Step 2: Build your application with failpoints
-Translate the gofail comments using command below. Note that `gofail` needs to be installed beforehand using command `go install go.etcd.io/gofail@latest`.
+Translate the gofail comments using command below. Note that `gofail` needs to be installed beforehand using command `go install github.com/openkvlab/gofail@latest`.
 ```
 $ gofail enable <optional_file_dir_list>
 ```
@@ -37,7 +37,7 @@ below to get examples on the translated & generated code.
 
 Afterwards, add gofail runtime package into your application as a dependency module,
 ```
-$ go get go.etcd.io/gofail/runtime
+$ go get github.com/openkvlab/gofail/runtime
 ```
 
 Finally, build your application using command `go build`.
@@ -107,7 +107,7 @@ You want to add a unit test to mimic an error the `WhateverSyscall` might return
 import (
     "testing"
 
-    gofail "go.etcd.io/gofail/runtime"
+    gofail "github.com/openkvlab/gofail/runtime"
 )
 
 func TestDoSomething(t *testing.T) {
@@ -154,7 +154,7 @@ The format of the generated code (#2) is below. Note that there may be multiple 
 
 package <PACKAGE_NAME>
 
-import "go.etcd.io/gofail/runtime"
+import "github.com/openkvlab/gofail/runtime"
 
 var __fp_<FAILPOINT_NAME> *runtime.Failpoint = runtime.NewFailpoint("<PACKAGE_NAME>", "<FAILPOINT_NAME>")
 ```
@@ -200,7 +200,7 @@ func ExampleOneLineFunc() string {
 
 package examples
 
-import "go.etcd.io/gofail/runtime"
+import "github.com/openkvlab/gofail/runtime"
 
 var __fp_ExampleOneLine *runtime.Failpoint = runtime.NewFailpoint("ExampleOneLine")
 ```

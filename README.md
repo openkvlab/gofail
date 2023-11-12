@@ -1,7 +1,5 @@
 # gofail
 
-[![Build Status](https://travis-ci.com/etcd-io/gofail.svg?branch=master)](https://travis-ci.com/etcd-io/gofail)
-
 An implementation of [failpoints][failpoint] for golang. Please read [design.md](doc/design.md) for a deeper understanding.
 
 [failpoint]: http://www.freebsd.org/cgi/man.cgi?query=fail
@@ -106,7 +104,7 @@ From a unit test,
 import (
 	"testing"
 
-	gofail "go.etcd.io/gofail/runtime"
+	gofail "github.com/openkvlab/gofail/runtime"
 )
 
 func TestWhatever(t *testing.T) {
